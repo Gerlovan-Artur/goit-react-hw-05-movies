@@ -24,6 +24,7 @@ export const MovieDetails = () => {
   const location = useLocation();
 
   const backLink = location.state?.from ?? '/';
+  
 
   useEffect(() => {
     getMovieDetails(Number(movieId))
@@ -66,8 +67,8 @@ export const MovieDetails = () => {
           </div>
           <LinkWrapper>
             <Additional>Additional information</Additional>
-            <MyLink to="cast">Cast</MyLink>
-            <MyLink to="reviews">Reviews</MyLink>
+            <MyLink to="cast" state={location.state}>Cast</MyLink>
+            <MyLink to="reviews" state={location.state}>Reviews</MyLink>
           </LinkWrapper>
         </Wrapper>
       )}

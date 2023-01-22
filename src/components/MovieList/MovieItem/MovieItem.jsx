@@ -1,6 +1,7 @@
 import { Image, Text } from './MovieItem.styled';
 import { MyLink } from './MovieItem.styled';
 import { Box } from './MovieItem.styled';
+import PropTypes from 'prop-types';
 
 export const BASE_IMG_URL = 'https://image.tmdb.org/t/p/w500';
 
@@ -27,3 +28,14 @@ export function MovieItem({
     </li>
   );
 }
+
+MovieItem.propTypes = {
+  movie: PropTypes.shape({
+    profile_path: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,    
+      vote_average: PropTypes.string.isRequired,
+    }),
+  };
+    

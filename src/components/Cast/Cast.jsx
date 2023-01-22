@@ -3,6 +3,7 @@ import { getMovieActors } from 'components/getMovies';
 import { useParams } from 'react-router-dom';
 import { CastItem } from 'components/CastItem/CastItem';
 import { List } from './Cast.styled';
+import PropTypes from 'prop-types';
 
 export const Cast = () => {
   const [cast, setCast] = useState([]);
@@ -25,6 +26,10 @@ export const Cast = () => {
       </List>
     </>
   );
+};
+
+Cast.propTypes = {
+  movieId: PropTypes.string,
 };
 
 export default Cast;

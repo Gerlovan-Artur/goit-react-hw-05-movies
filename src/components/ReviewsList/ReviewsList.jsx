@@ -1,5 +1,6 @@
 import { ReviewItem } from 'components/ReviewItem/ReviewItem';
 import { List } from './ReviewsList.styled';
+import PropTypes from 'prop-types';
 
 export function ReviewsList({ reviews }) {
   return (
@@ -10,3 +11,7 @@ export function ReviewsList({ reviews }) {
     </List>
   );
 }
+
+ReviewsList.propTypes = {
+  review: PropTypes.object,
+};
